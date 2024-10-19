@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <RadioButton
+        android:id="@+id/monButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mon"
+        android:onClick="selectTable"
+        />
+
+    <RadioButton
+        android:id="@+id/tueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tue"
+        android:onClick="selectTable"/>
+
+    <RadioButton
+        android:id="@+id/wedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wed"
+        android:onClick="selectTable"
+        />
+
+    <RadioButton
+        android:id="@+id/thuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="thu"
+        android:onClick="selectTable"/>
+
+    <RadioButton
+        android:id="@+id/friButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fri"
+        android:onClick="selectTable"/>
+
+    <RadioButton
+        android:id="@+id/satButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sat"
+        android:onClick="selectTable"/>
+
+    <RadioButton
+        android:id="@+id/sunButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sun"
+        android:onClick="selectTable"/>
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

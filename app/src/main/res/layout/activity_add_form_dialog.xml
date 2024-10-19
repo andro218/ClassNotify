@@ -1,0 +1,288 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/entryLayout">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFE5CF"
+        tools:context=".studentForm">
+
+
+        <!--Icon-->
+
+        <!--Name-->
+
+        <EditText
+            android:id="@+id/subject_name"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="Subject Name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/subject_code"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="Subject Code"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subject_name" />
+
+        <!--Age-->
+
+        <!--Address-->
+
+        <EditText
+            android:id="@+id/block_course"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="Block And Course"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subject_code" />
+
+        <!--School-->
+
+        <EditText
+            android:id="@+id/instructor"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="Instructor/Teacher"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/block_course" />
+
+        <!--Department-->
+
+
+        <EditText
+            android:id="@+id/fromTime"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="From"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor" />
+
+
+        <EditText
+            android:id="@+id/toTime"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="To"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.813"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor" />
+
+        <EditText
+            android:id="@+id/room"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="Room (optional)"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#D6B7AD"
+            android:elevation="10dp"
+            android:onClick="openMain"
+            android:shadowColor="#090909"
+            android:text="@string/save"
+            android:textColor="#ED434040"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunTextView" />  <!-- Update position if necessary -->
+
+
+        <RadioButton
+            android:id="@+id/monButton"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="13dp"
+
+            android:onClick="selectTable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/room" />
+
+        <RadioButton
+            android:id="@+id/tueButton"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:onClick="selectTable"
+            app:layout_constraintStart_toEndOf="@+id/monButton"
+            app:layout_constraintTop_toBottomOf="@+id/room" />
+
+        <RadioButton
+            android:id="@+id/wedButton"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:onClick="selectTable"
+            app:layout_constraintStart_toEndOf="@+id/tueButton"
+            app:layout_constraintTop_toBottomOf="@+id/room" />
+
+        <RadioButton
+            android:id="@+id/thuButton"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:onClick="selectTable"
+            app:layout_constraintStart_toEndOf="@+id/wedButton"
+            app:layout_constraintTop_toBottomOf="@+id/room" />
+
+        <RadioButton
+            android:id="@+id/friButton"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:onClick="selectTable"
+            app:layout_constraintStart_toEndOf="@+id/thuButton"
+            app:layout_constraintTop_toBottomOf="@+id/room" />
+
+        <RadioButton
+            android:id="@+id/satButton"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+
+            android:layout_marginTop="13dp"
+            android:onClick="selectTable"
+            app:layout_constraintStart_toEndOf="@+id/friButton"
+            app:layout_constraintTop_toBottomOf="@+id/room" />
+
+        <RadioButton
+            android:id="@+id/sunButton"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:onClick="selectTable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/satButton"
+            app:layout_constraintTop_toBottomOf="@+id/room" />
+
+        <TextView
+            android:id="@+id/monTextView"
+            android:layout_width="31dp"
+            android:layout_height="19dp"
+            android:gravity="center"
+            android:layout_marginStart="75dp"
+            android:text="mon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monButton" />
+
+        <TextView
+            android:id="@+id/tueTextView"
+            android:layout_width="31dp"
+            android:layout_height="19dp"
+            android:gravity="center"
+            android:text="tue"
+            app:layout_constraintStart_toEndOf="@+id/monTextView"
+            app:layout_constraintTop_toBottomOf="@+id/tueButton" />
+
+        <TextView
+            android:id="@+id/wedTextView"
+            android:layout_width="31dp"
+            android:layout_height="19dp"
+
+            android:gravity="center"
+            android:text="wed"
+            app:layout_constraintStart_toEndOf="@+id/tueTextView"
+            app:layout_constraintTop_toBottomOf="@+id/wedButton" />
+
+        <TextView
+            android:id="@+id/thuTextView"
+            android:layout_width="31dp"
+            android:layout_height="19dp"
+
+            android:gravity="center"
+            android:text="thu"
+
+            app:layout_constraintStart_toEndOf="@+id/wedTextView"
+            app:layout_constraintTop_toBottomOf="@+id/thuButton" />
+
+        <TextView
+            android:id="@+id/friTextView"
+            android:layout_width="31dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="1dp"
+            android:gravity="center"
+
+            android:text="fri"
+            app:layout_constraintStart_toEndOf="@+id/thuTextView"
+            app:layout_constraintTop_toBottomOf="@+id/friButton" />
+
+        <TextView
+            android:id="@+id/satTextView"
+            android:layout_width="31dp"
+            android:layout_height="19dp"
+            android:gravity="center"
+            android:text="sat"
+            app:layout_constraintStart_toEndOf="@+id/friTextView"
+            app:layout_constraintTop_toBottomOf="@+id/satButton" />
+
+        <TextView
+            android:id="@+id/sunTextView"
+            android:layout_width="31dp"
+            android:layout_height="19dp"
+            android:gravity="center"
+            android:text="sun"
+            app:layout_constraintStart_toEndOf="@+id/satTextView"
+            app:layout_constraintTop_toBottomOf="@+id/sunButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
