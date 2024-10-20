@@ -10,18 +10,13 @@
     android:layout_height="match_parent"
     android:id="@+id/entryLayout">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFE5CF"
         tools:context=".studentForm">
 
-
-        <!--Icon-->
-
-        <!--Name-->
-
+        <!-- Name -->
         <EditText
             android:id="@+id/subject_name"
             android:layout_width="300dp"
@@ -36,6 +31,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Subject Code -->
         <EditText
             android:id="@+id/subject_code"
             android:layout_width="300dp"
@@ -50,10 +46,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/subject_name" />
 
-        <!--Age-->
-
-        <!--Address-->
-
+        <!-- Block and Course -->
         <EditText
             android:id="@+id/block_course"
             android:layout_width="300dp"
@@ -68,8 +61,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/subject_code" />
 
-        <!--School-->
-
+        <!-- Instructor -->
         <EditText
             android:id="@+id/instructor"
             android:layout_width="300dp"
@@ -84,37 +76,97 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/block_course" />
 
-        <!--Department-->
+        <!-- Time Spinners -->
 
+        <!-- Weekday Checkboxes -->
 
-        <EditText
-            android:id="@+id/fromTime"
+        <Spinner
+            android:id="@+id/fromTimeSpinner"
             android:layout_width="141dp"
             android:layout_height="48dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/cornerradius"
-            android:ems="10"
-            android:hint="From"
-
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintHorizontal_bias="0.119"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/instructor" />
+            app:layout_constraintTop_toBottomOf="@+id/fromTextView" />
 
-
-        <EditText
-            android:id="@+id/toTime"
+        <Spinner
+            android:id="@+id/toTimeSpinner"
             android:layout_width="141dp"
             android:layout_height="48dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/cornerradius"
-            android:ems="10"
-            android:hint="To"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.876"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toTextView" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
 
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.813"
+            app:layout_constraintHorizontal_bias="0.67"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/instructor" />
+            app:layout_constraintTop_toBottomOf="@+id/room">
+
+            <CheckBox
+                android:id="@+id/monCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/tueCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tue"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/wedCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wed"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/thuCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thu"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/friCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fri"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/satCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sat"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/sunCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sun"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <!-- Save Button -->
 
         <EditText
             android:id="@+id/room"
@@ -132,157 +184,56 @@
 
         <Button
             android:id="@+id/save_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="159dp"
+            android:layout_height="57dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="#D6B7AD"
             android:elevation="10dp"
-            android:onClick="openMain"
+            android:onClick="saveClass"
             android:shadowColor="#090909"
             android:text="@string/save"
             android:textColor="#ED434040"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sunTextView" />  <!-- Update position if necessary -->
+            app:layout_constraintTop_toBottomOf="@+id/colorPickerButton"
+            app:layout_constraintVertical_bias="0.352" />
 
-
-        <RadioButton
-            android:id="@+id/monButton"
-            android:layout_width="31dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="75dp"
-            android:layout_marginTop="13dp"
-
-            android:onClick="selectTable"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/room" />
-
-        <RadioButton
-            android:id="@+id/tueButton"
-            android:layout_width="31dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="13dp"
-            android:onClick="selectTable"
-            app:layout_constraintStart_toEndOf="@+id/monButton"
-            app:layout_constraintTop_toBottomOf="@+id/room" />
-
-        <RadioButton
-            android:id="@+id/wedButton"
-            android:layout_width="31dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="13dp"
-            android:onClick="selectTable"
-            app:layout_constraintStart_toEndOf="@+id/tueButton"
-            app:layout_constraintTop_toBottomOf="@+id/room" />
-
-        <RadioButton
-            android:id="@+id/thuButton"
-            android:layout_width="31dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="13dp"
-            android:onClick="selectTable"
-            app:layout_constraintStart_toEndOf="@+id/wedButton"
-            app:layout_constraintTop_toBottomOf="@+id/room" />
-
-        <RadioButton
-            android:id="@+id/friButton"
-            android:layout_width="31dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="13dp"
-            android:onClick="selectTable"
-            app:layout_constraintStart_toEndOf="@+id/thuButton"
-            app:layout_constraintTop_toBottomOf="@+id/room" />
-
-        <RadioButton
-            android:id="@+id/satButton"
-            android:layout_width="31dp"
-            android:layout_height="30dp"
-
-            android:layout_marginTop="13dp"
-            android:onClick="selectTable"
-            app:layout_constraintStart_toEndOf="@+id/friButton"
-            app:layout_constraintTop_toBottomOf="@+id/room" />
-
-        <RadioButton
-            android:id="@+id/sunButton"
-            android:layout_width="31dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="13dp"
-            android:onClick="selectTable"
+        <Button
+            android:id="@+id/colorPickerButton"
+            android:layout_width="130dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#A6FF885B"
+            android:text="Pick Color"
+            android:textColor="@color/black"
+            android:onClick="openColorPicker"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/satButton"
-            app:layout_constraintTop_toBottomOf="@+id/room" />
-
-        <TextView
-            android:id="@+id/monTextView"
-            android:layout_width="31dp"
-            android:layout_height="19dp"
-            android:gravity="center"
-            android:layout_marginStart="75dp"
-            android:text="mon"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/monButton" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <TextView
-            android:id="@+id/tueTextView"
-            android:layout_width="31dp"
-            android:layout_height="19dp"
-            android:gravity="center"
-            android:text="tue"
-            app:layout_constraintStart_toEndOf="@+id/monTextView"
-            app:layout_constraintTop_toBottomOf="@+id/tueButton" />
+            android:id="@+id/fromTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="8dp"
+            android:text="From"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor" />
 
         <TextView
-            android:id="@+id/wedTextView"
-            android:layout_width="31dp"
-            android:layout_height="19dp"
-
-            android:gravity="center"
-            android:text="wed"
-            app:layout_constraintStart_toEndOf="@+id/tueTextView"
-            app:layout_constraintTop_toBottomOf="@+id/wedButton" />
-
-        <TextView
-            android:id="@+id/thuTextView"
-            android:layout_width="31dp"
-            android:layout_height="19dp"
-
-            android:gravity="center"
-            android:text="thu"
-
-            app:layout_constraintStart_toEndOf="@+id/wedTextView"
-            app:layout_constraintTop_toBottomOf="@+id/thuButton" />
-
-        <TextView
-            android:id="@+id/friTextView"
-            android:layout_width="31dp"
-            android:layout_height="19dp"
-            android:layout_marginStart="1dp"
-            android:gravity="center"
-
-            android:text="fri"
-            app:layout_constraintStart_toEndOf="@+id/thuTextView"
-            app:layout_constraintTop_toBottomOf="@+id/friButton" />
-
-        <TextView
-            android:id="@+id/satTextView"
-            android:layout_width="31dp"
-            android:layout_height="19dp"
-            android:gravity="center"
-            android:text="sat"
-            app:layout_constraintStart_toEndOf="@+id/friTextView"
-            app:layout_constraintTop_toBottomOf="@+id/satButton" />
-
-        <TextView
-            android:id="@+id/sunTextView"
-            android:layout_width="31dp"
-            android:layout_height="19dp"
-            android:gravity="center"
-            android:text="sun"
-            app:layout_constraintStart_toEndOf="@+id/satTextView"
-            app:layout_constraintTop_toBottomOf="@+id/sunButton" />
+            android:id="@+id/toTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="8dp"
+            android:text="To"
+            app:layout_constraintStart_toEndOf="@+id/fromTextView"
+            app:layout_constraintTop_toBottomOf="@+id/instructor" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.classnotify;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,6 +26,7 @@ public class WeekTable extends AppCompatActivity {
         // Get the TableLayout where the week table is stored
         tableLayout = findViewById(R.id.table_data);
 
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,9 +34,6 @@ public class WeekTable extends AppCompatActivity {
                 showFabMenu(view);
             }
         });
-
-        // Add a click listener for table rows to select them
-        setupRowClickListeners();
     }
 
     private void showFabMenu(View view) {
@@ -81,12 +80,5 @@ public class WeekTable extends AppCompatActivity {
         }
     }
 
-    private void setupRowClickListeners() {
-        int rowCount = tableLayout.getChildCount();
 
-        for (int i = 0; i < rowCount; i++) {
-            final TableRow row = (TableRow) tableLayout.getChildAt(i);
-
-        }
-    }
 }

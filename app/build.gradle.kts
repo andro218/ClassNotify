@@ -35,6 +35,7 @@ android {
 }
 
 dependencies {
+    implementation("com.github.Dhaval2404:ColorPicker:2.3")
     implementation (libs.material)
     implementation(libs.appcompat)
     implementation(libs.material)
