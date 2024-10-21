@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,9 +25,28 @@ public class WeekTable extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_week_table);
 
-        // Get the TableLayout where the week table is stored
-        tableLayout = findViewById(R.id.table_data);
+        // Retrieve the data passed from addForm_dialog
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("SUBJECT_NAME")) {
+            String subjectName = intent.getStringExtra("SUBJECT_NAME");
+            String subjectCode = intent.getStringExtra("SUBJECT_CODE");
+            String blockCourse = intent.getStringExtra("BLOCK_COURSE");
+            String instructor = intent.getStringExtra("INSTRUCTOR");
+            String fromTime = intent.getStringExtra("FROM_TIME");
+            String toTime = intent.getStringExtra("TO_TIME");
+            String room = intent.getStringExtra("ROOM");
+            boolean[] weekdays = intent.getBooleanArrayExtra("WEEKDAYS");
+            int selectedColor = intent.getIntExtra("SELECTED_COLOR", Color.BLACK);
 
+            // Format the class information text
+            String classInfo = subjectName + " (" + subjectCode + ")\n" +
+                    "Instructor: " + instructor + "\n" +
+                    "Time: " + fromTime + " - " + toTime + "\n" +
+                    "Room: " + room;
+
+            // Update the TextViews for the corresponding weekdays
+            updateTextViews(weekdays, classInfo, selectedColor, fromTime, toTime);
+        }
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +55,56 @@ public class WeekTable extends AppCompatActivity {
                 showFabMenu(view);
             }
         });
+    }
+
+    private void updateTextViews(boolean[] weekdays, String classInfo, int selectedColor, String fromTime, String toTime) {
+        int fromColumn = getColumnIndex(fromTime); // Get the index for the "From" time
+        int toColumn = getColumnIndex(toTime); // Get the index for the "To" time
+
+        // Check if the indices are valid
+        if (fromColumn == -1 || toColumn == -1 || fromColumn >= toColumn) {
+            Toast.makeText(this, "Invalid time selected", Toast.LENGTH_SHORT).show();
+            return; // Exit if time is invalid
+        }
+
+        // Loop through each day and update TextViews based on selected time columns
+        for (int day = 0; day < weekdays.length; day++) {
+            if (weekdays[day]) { // If the checkbox for the day is checked
+                for (int col = fromColumn; col < toColumn; col++) {
+                    int resId = getResources().getIdentifier(getDayString(day) + "Col" + (col + 1), "id", getPackageName());
+                    TextView textView = findViewById(resId);
+                    if (textView != null) {
+                        textView.setText(classInfo);
+                        textView.setBackgroundColor(selectedColor); // Set background color
+                    }
+                }
+            }
+        }
+    }
+
+    private String getDayString(int day) {
+        switch (day) {
+            case 0: return "mon";
+            case 1: return "tue";
+            case 2: return "wed";
+            case 3: return "thu";
+            case 4: return "fri";
+            case 5: return "sat";
+            case 6: return "sun";
+            default: return "";
+        }
+    }
+
+    private int getColumnIndex(String time) {
+        String[] timeSlots = getResources().getStringArray(R.array.from_time_items); // Ensure this array has the correct time slots
+
+        // Loop through the time slots to find the index
+        for (int i = 0; i < timeSlots.length; i++) {
+            if (timeSlots[i].equals(time)) {
+                return i; // Return the column index corresponding to the time (0-based index for table columns)
+            }
+        }
+        return -1; // Return -1 if time not found
     }
 
     private void showFabMenu(View view) {
@@ -79,6 +150,4 @@ public class WeekTable extends AppCompatActivity {
             selectedRow = null; // Reset selected row
         }
     }
-
-
 }
