@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,1713 +9,1255 @@
     <!-- Your existing layout elements (RelativeLayout, TableLayout, etc.) -->
 
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <TableLayout
-        android:id="@+id/table_header"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFE5CF">
-
-
-        <!--Table Heading-->
-        <TableRow android:background="@color/green">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="5sp"
-                android:text="Table"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="5sp"
-                android:text="Mon"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="5sp"
-                android:text="Tue"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="5sp"
-                android:text="Wed"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="5sp"
-                android:text="Thu"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="5sp"
-                android:text="Fri"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="5sp"
-                android:text="Sat"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="5sp"
-                android:text="Sun"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-
-        </TableRow>
-    </TableLayout>
-
-    <!--Table Data-->
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/table_header"
-        android:layout_marginTop="2dp">
+        android:layout_height="match_parent">
 
 
 
 
         <TableLayout
-            android:id="@+id/table_data"
+            android:id="@+id/table_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE5CF">
 
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row1">
+
+            <!--Table Heading-->
+            <TableRow android:background="@color/green">
 
                 <TextView
-                    android:id="@+id/timeCol1"
-                    android:background="@color/green"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="8:00- 8:30"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
+                    style="@style/CustomTextView"
+                    android:text="Table"
+                     />
+
                 <TextView
-                    android:id="@+id/monCol1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
+                    style="@style/CustomTextView"
+                    android:text="Mon"
+                     />
+
                 <TextView
-                    android:id="@+id/tueCol1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
+                    style="@style/CustomTextView"
+                    android:text="Tue"
+                     />
+
                 <TextView
-                    android:id="@+id/wedCol1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
+                    style="@style/CustomTextView"
+                    android:text="Wed"
+                     />
+
                 <TextView
-                    android:id="@+id/thuCol1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
+                    style="@style/CustomTextView"
+                    android:text="Thu"
+                     />
+
                 <TextView
-                    android:id="@+id/friCol1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
+                    style="@style/CustomTextView"
+                    android:text="Fri"
                     />
 
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomTextView"
+                    android:text="Sat"
+                     />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomTextView"
+                    android:text="Sun"
+                     />
 
             </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row2">
-
-                <TextView
-                    android:id="@+id/timeCol2"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="8:30- 9:00"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row3">
-
-                <TextView
-                    android:id="@+id/timeCol3"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="9:00- 9:30"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row4">
-
-                <TextView
-                    android:id="@+id/timeCol4"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="9:30- 10:00"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row5">
-
-                <TextView
-                    android:id="@+id/timeCol5"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="10:00- 10:30"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row6">
-
-
-                <TextView
-                    android:id="@+id/timeCol6"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="10:30- 11:00"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row7">
-
-                <TextView
-                    android:id="@+id/timeCol7"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="11:00- 11:30"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row8">
-
-                <TextView
-                    android:id="@+id/timeCol8"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="11:30- 12:00"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol8"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol8"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol8"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol8"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol8"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol8"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol8"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row9">
-
-                <TextView
-                    android:id="@+id/timeCol9"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="12:00- 12:30"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol9"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol9"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol9"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol9"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol9"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol9"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol9"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row10">
-
-                <TextView
-                    android:id="@+id/timeCol10"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="12:30- 1:00"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol10"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol10"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol10"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol10"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol10"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol10"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol10"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row11">
-
-                <TextView
-                    android:id="@+id/timeCol11"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="1:00- 1:30"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row12">
-
-                <TextView
-                    android:id="@+id/timeCol12"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="1:30- 2:00"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol12"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol12"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol12"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol12"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol12"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol12"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol12"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row13">
-
-                <TextView
-                    android:id="@+id/timeCol13"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="2:00- 2:30"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol13"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol13"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol13"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol13"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol13"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol13"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol13"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row14">
-
-                <TextView
-                    android:id="@+id/timeCol14"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="9sp"
-                    android:text="2:30- 3:00"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol14"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol14"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol14"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol14"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol14"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol14"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol14"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row15">
-
-                <TextView
-                    android:id="@+id/timeCol15"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="3:00- 3:30"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol15"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol15"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol15"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol15"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol15"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    tools:ignore="SmallSp" />
-                <TextView
-                    android:id="@+id/satCol15"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol15"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row16">
-
-                <TextView
-                    android:id="@+id/timeCol16"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="9sp"
-                    android:text="3:30- 4:00"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol16"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol16"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol16"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol16"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol16"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol16"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol16"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row17">
-
-                <TextView
-                    android:id="@+id/timeCol17"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="4:00- 4:30"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol17"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol17"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol17"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol17"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol17"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol17"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol17"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-            <TableRow
-                android:background="@color/background"
-                android:id="@+id/row18">
-
-                <TextView
-                    android:id="@+id/timeCol18"
-                    android:background="@color/green"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10sp"
-                    android:text="4:30- 5:00"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/monCol18"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:text=""
-                    android:textSize="5sp"
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/tueCol18"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/wedCol18"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/thuCol18"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/friCol18"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/satCol18"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-                <TextView
-                    android:id="@+id/sunCol18"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5sp"
-                    android:textSize="5sp"
-                    android:text=""
-                    android:layout_weight="4"
-                    android:gravity="center_horizontal"
-                    />
-
-            </TableRow>
-
         </TableLayout>
 
-    </ScrollView>
-</RelativeLayout>
+        <!--Table Data-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table_header"
+            android:layout_marginTop="2dp">
+
+
+            <TableLayout
+                android:id="@+id/table_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFE5CF">
+
+                <TableRow
+                    android:id="@+id/row1"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="8:00- 8:30"
+                         />
+
+                    <TextView
+                        android:id="@+id/monCol1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                     style="@style/CustomTextViewStyle"
+                        android:text=""
+                         />
+
+                    <TextView
+                        android:id="@+id/tueCol1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/wedCol1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row2"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="8:30- 9:00"
+                         />
+
+                    <TextView
+                        android:id="@+id/monCol2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/wedCol2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row3"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="9:00- 9:30" />
+
+                    <TextView
+                        android:id="@+id/monCol3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/tueCol3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/wedCol3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/thuCol3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=" "/>
+
+                    <TextView
+                        android:id="@+id/friCol3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=" " />
+
+                    <TextView
+                        android:id="@+id/satCol3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=" " />
+
+                    <TextView
+                        android:id="@+id/sunCol3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=" " />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row4"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="9:30- 10:00"
+                         />
+
+                    <TextView
+                        android:id="@+id/monCol4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/wedCol4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/thuCol4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row5"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        android:text="10:00- 10:30"
+                        style="@style/CustomTextView" />
+
+                    <TextView
+                        android:id="@+id/monCol5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/wedCol5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/thuCol5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/friCol5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row6"
+                    android:background="@color/background">
+
+
+                    <TextView
+                        android:id="@+id/timeCol6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="10:30- 11:00"
+                         />
+
+                    <TextView
+                        android:id="@+id/monCol6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/tueCol6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/wedCol6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/thuCol6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row7"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="11:00- 11:30"
+                        />
+
+                    <TextView
+                        android:id="@+id/monCol7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/tueCol7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/wedCol7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/friCol7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row8"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="11:30- 12:00"
+                        />
+
+                    <TextView
+                        android:id="@+id/monCol8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/wedCol8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row9"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="12:00- 12:30"
+                        />
+
+                    <TextView
+                        android:id="@+id/monCol9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/wedCol9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row10"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="12:30- 1:00"
+                        />
+
+                    <TextView
+                        android:id="@+id/monCol10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/wedCol10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row11"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        android:text="1:00- 1:30"
+                        style="@style/CustomTextView" />
+
+                    <TextView
+                        android:id="@+id/monCol11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/wedCol11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/satCol11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row12"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="1:30- 2:00"
+                        />
+
+                    <TextView
+                        android:id="@+id/monCol12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/wedCol12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/thuCol12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/friCol12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row13"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="2:00- 2:30"
+                        />
+
+                    <TextView
+                        android:id="@+id/monCol13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/wedCol13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row14"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="2:30- 3:00" />
+
+                    <TextView
+                        android:id="@+id/monCol14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/wedCol14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row15"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="3:00- 3:30"
+                        />
+
+                    <TextView
+                        android:id="@+id/monCol15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/wedCol15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/satCol15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row16"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="3:30- 4:00"
+                         />
+
+                    <TextView
+                        android:id="@+id/monCol16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/wedCol16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row17"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="4:00- 4:30"
+                        />
+
+                    <TextView
+                        android:id="@+id/monCol17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/tueCol17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/wedCol17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/friCol17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row18"
+                    android:background="@color/background">
+
+                    <TextView
+                        android:id="@+id/timeCol18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        style="@style/CustomTextView"
+                        android:text="4:30- 5:00"
+                        />
+
+                    <TextView
+                        android:id="@+id/monCol18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tueCol18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/wedCol18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/thuCol18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/friCol18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/satCol18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/sunCol18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomTextViewStyle"
+                        android:text="" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </ScrollView>
+    </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -1724,7 +1265,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        app:backgroundTint="#FF885B"
-        android:src="@drawable/ic_add" />
+        android:src="@drawable/ic_add"
+        app:backgroundTint="#FF885B" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

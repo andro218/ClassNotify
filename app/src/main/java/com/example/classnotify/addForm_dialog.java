@@ -286,7 +286,7 @@ public class addForm_dialog extends AppCompatActivity {
 
     // Get the row index based on the selected time
     private int getColumnIndex(String time) {
-        String[] timeSlots = getResources().getStringArray(R.array.from_time_items); // Ensure this array has the correct time slots
+        String[] timeSlots = getResources().getStringArray(R.array.from_time_items); // Adjust if necessary
 
         // Loop through the time slots to find the index
         for (int i = 0; i < timeSlots.length; i++) {

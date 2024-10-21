@@ -56,10 +56,12 @@
         <item>3:00 - 3:30</item>
         <item>3:30 - 4:00</item>
         <item>4:00 - 4:30</item>
+        <item>4:30 - 5:00</item>
     </string-array>
 
 
     <string-array name="to_time_items">
+        <item>8:00 - 8:30</item>
         <item>8:30 - 9:00</item>
         <item>9:00 - 9:30</item>
         <item>9:30 - 10:00</item>

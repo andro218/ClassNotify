@@ -41,7 +41,7 @@ public class WeekTable extends AppCompatActivity {
             // Format the class information text
             String classInfo = subjectName + " (" + subjectCode + ")\n" +
                     "Instructor: " + instructor + "\n" +
-                    "Time: " + fromTime + " - " + toTime + "\n" +
+                      "\n" +
                     "Room: " + room;
 
             // Update the TextViews for the corresponding weekdays
@@ -70,12 +70,16 @@ public class WeekTable extends AppCompatActivity {
         // Loop through each day and update TextViews based on selected time columns
         for (int day = 0; day < weekdays.length; day++) {
             if (weekdays[day]) { // If the checkbox for the day is checked
+                boolean textSet = false; // Track if text has been set for this time slot
                 for (int col = fromColumn; col < toColumn; col++) {
                     int resId = getResources().getIdentifier(getDayString(day) + "Col" + (col + 1), "id", getPackageName());
                     TextView textView = findViewById(resId);
                     if (textView != null) {
-                        textView.setText(classInfo);
-                        textView.setBackgroundColor(selectedColor); // Set background color
+                        if (!textSet) {
+                            textView.setText(classInfo); // Set text only if not already set
+                            textSet = true; // Mark that text has been set
+                        }
+                        textView.setBackgroundColor(selectedColor); // Always set background color
                     }
                 }
             }
