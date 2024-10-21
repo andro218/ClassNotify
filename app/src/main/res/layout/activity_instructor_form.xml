@@ -5,12 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFE5CF"
-    tools:context=".studentForm">
+    tools:context=".InstructorForm">
 
-
-    <!--Icon-->
-
-    <!--Name-->
+    <!-- Icon -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/instructor_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/student_header"
@@ -25,18 +31,9 @@
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/instructor_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <!-- Last Name -->
     <TextView
-        android:id="@+id/lastName_label"
+        android:id="@+id/lastName_label_instructor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -48,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/lastName_text"
+        android:id="@+id/lastName_text_instructor"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
@@ -59,10 +56,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName_label" />
+        app:layout_constraintTop_toBottomOf="@+id/lastName_label_instructor" />
+
+    <!-- First Name -->
+    <TextView
+        android:id="@+id/firstName_label_instructor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/firstName_label"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastName_text_instructor" />
 
     <EditText
-        android:id="@+id/firstName_text"
+        android:id="@+id/firstName_text_instructor"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
@@ -73,22 +83,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.336"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName_label" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName_label_instructor" />
 
+    <!-- Middle Name -->
     <TextView
-        android:id="@+id/firstName_label"
+        android:id="@+id/midName_label_instructor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/firstName_label"
+        android:text="@string/midName_label"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName_text" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName_text_instructor" />
 
     <EditText
-        android:id="@+id/midName_text"
+        android:id="@+id/midName_text_instructor"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
@@ -99,22 +110,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/midName_label" />
+        app:layout_constraintTop_toBottomOf="@+id/midName_label_instructor" />
 
+    <!-- Age -->
     <TextView
-        android:id="@+id/midName_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/midName_label"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName_text" />
-    <!--Age-->
-    <TextView
-        android:id="@+id/age_label"
+        android:id="@+id/age_label_instructor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -123,12 +123,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/midName_text" />
-
-    <!--Address-->
+        app:layout_constraintTop_toBottomOf="@+id/midName_text_instructor" />
 
     <EditText
-        android:id="@+id/age_text"
+        android:id="@+id/age_text_instructor"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
@@ -139,10 +137,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age_label" />
+        app:layout_constraintTop_toBottomOf="@+id/age_label_instructor" />
 
+    <!-- Address -->
     <TextView
-        android:id="@+id/address_label"
+        android:id="@+id/address_label_instructor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -151,12 +150,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age_text" />
-
-    <!--School-->
+        app:layout_constraintTop_toBottomOf="@+id/age_text_instructor" />
 
     <EditText
-        android:id="@+id/address_text"
+        android:id="@+id/address_text_instructor"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
@@ -167,10 +164,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address_label" />
+        app:layout_constraintTop_toBottomOf="@+id/address_label_instructor" />
 
+    <!-- School -->
     <TextView
-        android:id="@+id/schools_label"
+        android:id="@+id/schools_label_instructor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -179,11 +177,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address_text" />
+        app:layout_constraintTop_toBottomOf="@+id/address_text_instructor" />
 
-    <!--Department-->
     <EditText
-        android:id="@+id/school_text"
+        android:id="@+id/school_text_instructor"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
@@ -194,10 +191,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.337"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/schools_label" />
+        app:layout_constraintTop_toBottomOf="@+id/schools_label_instructor" />
 
+    <!-- Department -->
     <TextView
-        android:id="@+id/department_label"
+        android:id="@+id/department_label_instructor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -206,10 +204,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/school_text" />
+        app:layout_constraintTop_toBottomOf="@+id/school_text_instructor" />
 
     <EditText
-        android:id="@+id/department_text"
+        android:id="@+id/department_text_instructor"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
@@ -220,7 +218,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/department_label" />
+        app:layout_constraintTop_toBottomOf="@+id/department_label_instructor" />
 
     <Button
         android:id="@+id/save_button"
@@ -229,14 +227,13 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="#D6B7AD"
         android:elevation="10dp"
-        android:onClick="openMain"
+        android:onClick="openMainInstructor"
         android:shadowColor="#090909"
         android:text="@string/save"
         android:textColor="#ED434040"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/department_text" />
-
+        app:layout_constraintTop_toBottomOf="@+id/department_text_instructor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

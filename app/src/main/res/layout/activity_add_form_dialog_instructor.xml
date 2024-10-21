@@ -1,0 +1,240 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/instructor_entryLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFE5CF"
+        tools:context=".InstructorForm">
+
+        <!-- Name -->
+        <EditText
+            android:id="@+id/instructor_subject_name"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="Subject Name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Subject Code -->
+        <EditText
+            android:id="@+id/instructor_subject_code"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="Subject Code"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor_subject_name" />
+
+        <!-- Block and Course -->
+        <EditText
+            android:id="@+id/instructor_block_course"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="Block And Course"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor_subject_code" />
+
+        <!-- Instructor -->
+
+
+        <!-- Time Spinners -->
+
+        <!-- Weekday Checkboxes -->
+
+        <Spinner
+            android:id="@+id/instructor_fromTimeSpinner"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/cornerradius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.119"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instructor_fromTextView" />
+
+        <Spinner
+            android:id="@+id/instructor_toTimeSpinner"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/cornerradius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.876"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instructor_fromTextView" />
+
+        <LinearLayout
+            android:id="@+id/instructor_linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.67"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor_room">
+
+            <CheckBox
+                android:id="@+id/instructor_monCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/instructor_tueCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tue"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/instructor_wedCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wed"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/instructor_thuCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thu"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/instructor_friCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fri"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/instructor_satCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sat"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/instructor_sunCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sun"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Save Button -->
+
+        <EditText
+            android:id="@+id/instructor_room"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="Room (optional)"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor_fromTimeSpinner" />
+
+        <Button
+            android:id="@+id/instructor_save_button"
+            android:layout_width="159dp"
+            android:layout_height="57dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#D6B7AD"
+            android:elevation="10dp"
+            android:onClick="saveClassInstructor"
+            android:shadowColor="#090909"
+            android:text="@string/save"
+            android:textColor="#ED434040"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor_colorPickerButton"
+            app:layout_constraintVertical_bias="0.352" />
+
+        <Button
+            android:id="@+id/instructor_colorPickerButton"
+            android:layout_width="130dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#A6FF885B"
+            android:text="Pick Color"
+            android:textColor="@color/black"
+            android:onClick="openColorPicker"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor_linearLayout" />
+
+        <TextView
+            android:id="@+id/instructor_fromTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="8dp"
+            android:text="From"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructor_block_course" />
+        <EditText
+            android:id="@+id/instructor"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/cornerradius"
+            android:ems="10"
+            android:hint="Instructor/Teacher"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+          app:layout_constraintTop_toBottomOf="@id/instructor_room" />
+
+        <TextView
+            android:id="@+id/instructor_toTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="8dp"
+            android:text="To"
+            app:layout_constraintStart_toEndOf="@+id/instructor_fromTextView"
+            app:layout_constraintTop_toBottomOf="@+id/instructor_block_course" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
