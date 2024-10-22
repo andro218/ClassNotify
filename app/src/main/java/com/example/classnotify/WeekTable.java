@@ -41,7 +41,6 @@ public class WeekTable extends AppCompatActivity {
             // Format the class information text
             String classInfo = subjectName + " (" + subjectCode + ")\n" +
                     "Instructor: " + instructor + "\n" +
-                    "Time: " + fromTime + " - " + toTime + "\n" +
                     "Room: " + room;
 
             // Update the TextViews for the corresponding weekdays

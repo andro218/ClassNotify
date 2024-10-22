@@ -45,10 +45,11 @@
         <activity
             android:name=".studentForm"
             android:label="@string/title_student_form"
-            android:parentActivityName=".Choices">
+            android:exported="false"
+            android:parentActivityName=".MainActivity"> <!-- Adjusted parent activity -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Choices" />
+                android:value=".MainActivity" />
         </activity>
 
         <activity

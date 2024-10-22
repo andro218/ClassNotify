@@ -78,11 +78,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             // Handle Developer click
         } else if (id == R.id.nav_personal_info) {
             // Handle Personal info click
+            Intent intent = new Intent(MainActivity.this, studentForm.class);
+            startActivity(intent);
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
