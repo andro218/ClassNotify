@@ -12,51 +12,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassNotify"
         tools:targetApi="31">
-
+        <activity
+            android:name=".developer"
+            android:exported="false" />
+        <activity
+            android:name=".aboutTheApp"
+            android:exported="false" />
         <activity
             android:name=".LoadingScreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".addForm_dialog"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".WeekTable"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".Choices"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".studentForm"
-            android:label="@string/title_student_form"
             android:exported="false"
+            android:label="@string/title_student_form"
             android:parentActivityName=".MainActivity"> <!-- Adjusted parent activity -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
         <activity
             android:name=".InstructorForm"
             android:exported="false"
             android:parentActivityName=".Choices" />
-
     </application>
 
 </manifest>

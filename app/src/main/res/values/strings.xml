@@ -36,6 +36,10 @@
     <string name="title_student_form">Student Form</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
+    <string name="aboutTheAppContent">  Class Notify is your go-to scheduling assistant designed for students and instructors alike. This app delivers instant notifications for all your school schedules, making it easy to stay organized and on time. Whether you’re a student balancing multiple subjects or an instructor managing different classes, Class Notify ensures you never miss a beat!</string>
+    <string name="appDescription">App Description: Class Notify</string>
+    <string name="keyFeatures">Key Features:</string>
+    <string name="appContent"><![CDATA[Student & Instructor Profiles: Custom-tailored views for students and instructors, giving each user type the tools they need to manage their schedules effectively.\n\nRoom Location Assistance: Provides clear room details so you can navigate through campus with ease.\n\nCustom Reminder Settings: Set how early you want to be reminded before each class to stay punctual and prepared.\n\n\nWith Class Notify, keeping track of your academic life is effortless. It’s the ultimate tool for students and teachers who need a quick, reliable way to stay updated and organized throughout the school day!]]></string>
 
 
     <string-array name="from_time_items">
