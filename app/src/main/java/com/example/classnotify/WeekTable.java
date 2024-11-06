@@ -10,6 +10,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.app.AlertDialog;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +20,7 @@ public class WeekTable extends AppCompatActivity {
 
     private TableRow selectedRow = null;  // Track the selected row for editing or deleting
     private TableLayout tableLayout;      // TableLayout that holds the week table
+    private boolean isEditMode = false;   // Flag to manage if the user is in edit mode
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,10 @@ public class WeekTable extends AppCompatActivity {
             updateTextViews(weekdays, classInfo, selectedColor, fromTime, toTime);
         }
 
+        // Set up the TableLayout and row selection
+        tableLayout = findViewById(R.id.table_data); // Ensure tableLayout is properly initialized
+        setupTableRows(); // Set up click listeners for table rows
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +60,28 @@ public class WeekTable extends AppCompatActivity {
                 showFabMenu(view);
             }
         });
+    }
+
+    private void setupTableRows() {
+        // Loop through all rows in the TableLayout and set an OnClickListener
+        for (int i = 0; i < tableLayout.getChildCount(); i++) {
+            TableRow row = (TableRow) tableLayout.getChildAt(i);
+            row.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (isEditMode) { // Only allow row selection if in edit mode
+                        // Select the clicked row
+                        selectedRow = (TableRow) v;
+                        // You could also change the background color of the selected row for visual feedback
+                        v.setBackgroundColor(Color.LTGRAY);
+                        Toast.makeText(WeekTable.this, "Row selected for editing", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Optionally, notify the user they need to enable edit mode first
+                        Toast.makeText(WeekTable.this, "Please enable edit mode to select a row", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 
     private void updateTextViews(boolean[] weekdays, String classInfo, int selectedColor, String fromTime, String toTime) {
@@ -120,7 +148,9 @@ public class WeekTable extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 } else if (item.getItemId() == R.id.action_edit_dialog) {
-                    handleEditAction();
+                    // Enable edit mode
+                    isEditMode = true; // Allow row selection for editing
+                    Toast.makeText(WeekTable.this, "Edit mode enabled", Toast.LENGTH_SHORT).show();
                     return true;
                 } else if (item.getItemId() == R.id.action_delete_dialog) {
                     handleDeleteAction();
@@ -134,19 +164,23 @@ public class WeekTable extends AppCompatActivity {
         popupMenu.show(); // Show the menu
     }
 
-    private void handleEditAction() {
-        if (selectedRow != null) {
-            // Handle Edit action
-            // Here you can add logic to open an edit dialog or activity
-        }
-    }
-
     private void handleDeleteAction() {
         if (selectedRow != null) {
-            // Handle Delete action
-            // Here you can add logic to delete the selected row
-            tableLayout.removeView(selectedRow); // Example: remove the selected row from the table
-            selectedRow = null; // Reset selected row
+            // Confirm deletion
+            new AlertDialog.Builder(this)
+                    .setTitle("Confirm Deletion")
+                    .setMessage("Are you sure you want to delete this entry?")
+                    .setPositiveButton("Yes", (dialog, which) -> {
+                        // Remove the selected row
+                        tableLayout.removeView(selectedRow);
+                        selectedRow = null; // Reset the selected row after deletion
+                        Toast.makeText(WeekTable.this, "Entry deleted", Toast.LENGTH_SHORT).show();
+                    })
+                    .setNegativeButton("No", null) // Dismiss the dialog
+                    .show();
+        } else {
+            // Notify the user to select a row first
+            Toast.makeText(this, "Please select a row to delete", Toast.LENGTH_SHORT).show();
         }
     }
 }

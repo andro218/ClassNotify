@@ -41,6 +41,10 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".WeekTableInstructor"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".Choices"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
@@ -57,8 +61,15 @@
             android:name=".InstructorForm"
             android:exported="false"
             android:parentActivityName=".Choices" />
-        <activity android:name=".InstructorActivity">
+        <activity android:name=".InstructorActivity"
+            android:exported="false"
+             >
+
         </activity>
+        <activity android:name=".addForm_dialogInstructor"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"></activity>
+
     </application>
 
 </manifest>
