@@ -73,11 +73,15 @@ public class InstructorActivity extends AppCompatActivity implements NavigationV
         int id = item.getItemId();
 
         if (id == R.id.nav_about_app) {
-            // Handle About the app click
+            Intent intent = new Intent(InstructorActivity.this, aboutTheApp.class);
+            startActivity(intent);
         } else if (id == R.id.nav_developer) {
-            // Handle Developer click
+            Intent intent = new Intent(InstructorActivity.this, developer.class);
+            startActivity(intent);
         } else if (id == R.id.nav_personal_info) {
             // Handle Personal info click
+            Intent intent = new Intent(InstructorActivity.this, studentForm.class);
+            startActivity(intent);
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

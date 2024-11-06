@@ -63,7 +63,7 @@
             android:layout_marginTop="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:srcCompat="@drawable/briann" />
+            android:src="@drawable/briann" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -73,7 +73,7 @@
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            tools:srcCompat="@drawable/raven" />
+            android:src="@drawable/raven" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -84,7 +84,7 @@
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            tools:srcCompat="@drawable/cris" />
+            android:src="@drawable/cris" />
 
         <TextView
             android:id="@+id/textView2"
@@ -189,6 +189,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <!-- NavigationView for the drawer menu -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_drawer_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
+
